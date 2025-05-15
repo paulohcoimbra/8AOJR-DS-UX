@@ -1,54 +1,58 @@
-# React + TypeScript + Vite
+# 🎨 Projeto Final — Design System & UX
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+### [MBA em Engenharia de Software — FIAP](https://www.fiap.com.br/mba/mba-em-engenharia-de-software/)  
+👨‍🏫 Professor: [Adonai Pinheiro](https://www.linkedin.com/in/adonaipinheiro/)
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+> **Objetivo:** Consolidar os conhecimentos de Design System & UX criando um sistema funcional em grupo (até 4 pessoas), com entregáveis em Figma e ReactJS.
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## 🚀 Entregáveis
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+### 1️⃣ [Design System no Figma](https://www.figma.com/design/niCAHygSchFA1sxDAu6ZrC/MBA-8AOJR?node-id=0-1&t=DWrI3W8wwPX1Y7kK-1)
+- 📁 Estrutura organizada seguindo boas práticas:
+  - Componentização
+  - Tokens de design
+  - Separação de estilos
+- 🖼️ Pelo menos **1 tela prototipada**
+- 🧩 Pelo menos **2 componentes reutilizáveis**
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+---
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+### 2️⃣ [Aplicação ReactJS](https://github.com/paulohcoimbra/8AOJR-DS-UX)
+- 💻 Implementação da interface proposta no Figma
+- 🏗️ Componentização conforme o Design System criado
+- 🎨 Uso de tokens de design (cores, espaçamentos, tipografia)
+- ⭐ **Bônus:** Storybook para documentação e testes unitários
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+---
+
+## 🛠️ Como iniciar o projeto
+
+1. **Clone o repositório:**
+  ```bash
+  git clone https://github.com/paulohcoimbra/8AOJR-DS-UX.git
+  cd 8AOJR-DS-UX
+  ```
+
+2. **Instale as dependências:**
+  ```bash
+  npm install
+  ```
+
+3. **Inicie a aplicação:**
+  ```bash
+  npm run dev
+  ```
+
+4. Acesse no navegador: [http://localhost:5173/](http://localhost:5173/)
+
+>  Certifique-se de ter o [Node.js](https://nodejs.org/) instalado.
+
+<div align="right">
+
+Criado por [Paulo Vasconcelos](https://www.linkedin.com/in/paulo-h-coimbra/) 🚀
+
+</div>
