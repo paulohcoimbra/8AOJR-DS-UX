@@ -1,4 +1,4 @@
-import { ReactNode } from 'react';
+import React, { ReactNode } from 'react';
 import { DSTypography_paragraph } from "../../utils/typography";
 import { Container, InputContainer } from './styled';
 
@@ -20,6 +20,10 @@ export function Input({ labelText, rightIcon, errorMessage, ...props} : DefaultI
             <input {...props} />
             {rightIcon ? rightIcon : ""}
           </InputContainer>
-          <DSTypography_paragraph>{errorMessage}</DSTypography_paragraph>
+          {errorMessage && (
+            <DSTypography_paragraph role="alert">
+              {errorMessage}
+            </DSTypography_paragraph>
+          )}
         </Container>
 }

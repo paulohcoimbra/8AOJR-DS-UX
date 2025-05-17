@@ -1,0 +1,17 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`PrimaryButton > should match to snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="sc-gIIpAQ bbFnEa"
+  >
+    <button>
+      <p
+        class="sc-jgmqJh feiOcM"
+      >
+        Click me
+      </p>
+    </button>
+  </div>
+</DocumentFragment>
+`;
