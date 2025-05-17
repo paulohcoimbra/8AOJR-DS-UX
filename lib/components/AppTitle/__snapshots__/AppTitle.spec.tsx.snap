@@ -1,0 +1,20 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`AppTitle > matches snapshot 1`] = `
+<div>
+  <div
+    class="sc-gIIpAQ dAScAa"
+  >
+    <h1
+      class="sc-VHjGu cuSVnV"
+    >
+      Snapshot Test
+    </h1>
+    <h3
+      class="sc-dQkurY kZfLFP"
+    >
+      This is my app
+    </h3>
+  </div>
+</div>
+`;
