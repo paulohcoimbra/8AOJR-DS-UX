@@ -11,12 +11,12 @@ export interface PrimaryButtonProps
 
 export function PrimaryButton({ leftIcon, rightIcon, text, ...props } : PrimaryButtonProps) {
   return <Container>
-    { leftIcon ? leftIcon : ""}
+    { leftIcon && leftIcon }
       <button {...props}>
         <DSTypography_button>
           {text}
         </DSTypography_button>
       </button>
-    { rightIcon ? rightIcon : ""}
+    { rightIcon && rightIcon }
   </Container>
 }

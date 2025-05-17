@@ -11,14 +11,15 @@ export interface DefaultInputProps
 
 export function Input({ labelText, rightIcon, errorMessage, ...props} : DefaultInputProps) {
   return <Container>
-          {labelText ? 
+          {labelText && 
             <label htmlFor="">
-              <DSTypography_paragraph>{labelText}</DSTypography_paragraph>
-            </label>
-          : ""}
+              <DSTypography_paragraph>
+                {labelText}
+              </DSTypography_paragraph>
+            </label>}
           <InputContainer>
             <input {...props} />
-            {rightIcon ? rightIcon : ""}
+            {rightIcon && rightIcon}
           </InputContainer>
           {errorMessage && (
             <DSTypography_paragraph role="alert">

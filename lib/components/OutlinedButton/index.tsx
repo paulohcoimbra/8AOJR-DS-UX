@@ -11,12 +11,12 @@ export interface OutlinedButtonProps
 
 export function OutlinedButton({ leftIcon, rightIcon, text, ...props } : OutlinedButtonProps) {
   return <Container>
-    { leftIcon ? leftIcon : ""}
+    { leftIcon && leftIcon}
       <button {...props}>
           <DSTypography_button>
             {text}
           </DSTypography_button>
         </button>
-    { rightIcon ? rightIcon : ""}
+    { rightIcon && rightIcon}
   </Container>
 }

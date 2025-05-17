@@ -11,12 +11,12 @@ export interface FlatButtonProps
 
 export function FlatButton({ leftIcon, rightIcon, text, ...props } : FlatButtonProps) {
   return <Container>
-    { leftIcon ? leftIcon : ""}
+    { leftIcon && leftIcon}
       <button {...props}>
         <DSTypography_button>
           {text}
         </DSTypography_button>
       </button>
-    { rightIcon ? rightIcon : ""}
+    { rightIcon && rightIcon}
   </Container>
 }
