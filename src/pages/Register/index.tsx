@@ -1,8 +1,7 @@
 import { useState } from "react";
 import { Input } from "../../../lib/components/Input";
-import { PrimaryButton } from "../../../lib/components/PrimaryButton";
+import { Button } from "../../../lib/components/Button";
 import { Container } from "./styled";
-import { FlatButton } from "../../../lib/components/FlatButton";
 import { useNavigate } from "react-router-dom";
 
 export function Register() {
@@ -24,11 +23,11 @@ export function Register() {
       <Input labelText="E-mail" type="email" />
       <Input labelText="Senha" type="password" />
       <Input labelText="Confirme a senha" type="password" />
-      <PrimaryButton text="Criar" onClick={handleCreate} />
+      <Button text="Criar" onClick={handleCreate} buttonStyle="primary"/>
     </Container>
     : <Container>
       <p>Conta criada com sucesso!</p>
-      <FlatButton text="Voltar A Tela De Login" onClick={handleBackToLogin} />
+      <Button buttonStyle="flat" text="Voltar A Tela De Login" onClick={handleBackToLogin} />
     </Container>}
   </>
 }

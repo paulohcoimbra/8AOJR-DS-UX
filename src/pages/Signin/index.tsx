@@ -1,7 +1,5 @@
 import { Container } from "./styled";
-import { PrimaryButton } from "../../../lib/components/PrimaryButton";
-import { OutlinedButton } from "../../../lib/components/OutlinedButton";
-import { FlatButton } from "../../../lib/components/FlatButton";
+import { Button } from "../../../lib/components/Button";
 import { GoogleIcon, FacebookIcon } from '../../../lib/components/Icons';
 import { useNavigate } from "react-router-dom";
 import { DSTypography_paragraph } from "../../../lib/utils/typography";
@@ -14,13 +12,13 @@ export function Signin() {
   }
 
   return <Container>
-            <OutlinedButton text="Entrar Com Sua Conta Google" leftIcon={<GoogleIcon/>} onClick={() => handleClick("google")} />
-            <OutlinedButton text="Entrar Com Sua Conta Facebook" leftIcon={<FacebookIcon/>} onClick={() => handleClick("facebook")}/>
+            <Button buttonStyle="outlined" text="Entrar Com Sua Conta Google" leftIcon={<GoogleIcon/>} onClick={() => handleClick("google")} />
+            <Button buttonStyle="outlined" text="Entrar Com Sua Conta Facebook" leftIcon={<FacebookIcon/>} onClick={() => handleClick("facebook")}/>
             <hr />
-            <PrimaryButton text="Entrar Com Seu Email" onClick={() => handleClick("login")}/>
+            <Button text="Entrar Com Seu Email" onClick={() => handleClick("login")} buttonStyle='primary'/>
             <div>
               <DSTypography_paragraph>Não tem uma conta?</DSTypography_paragraph>
-              <FlatButton text="Registre-se" onClick={() => handleClick("register")}/>
+              <Button buttonStyle="flat" text="Registre-se" onClick={() => handleClick("register")}/>
             </div>
         </Container>
 }

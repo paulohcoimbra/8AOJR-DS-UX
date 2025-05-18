@@ -1,8 +1,6 @@
 import { Container } from "./styled";
 import { Input } from "../../../lib/components/Input";
-import { PrimaryButton } from "../../../lib/components/PrimaryButton";
-import { OutlinedButton } from "../../../lib/components/OutlinedButton";
-import { FlatButton } from "../../../lib/components/FlatButton";
+import { Button } from "../../../lib/components/Button";
 import { LockIcon } from "../../../lib/components/Icons";
 
 import { useState } from "react";
@@ -68,8 +66,8 @@ export function Login() {
   return <Container>
             <Input labelText="E-mail" type="email" name="email" placeholder="Digite seu e-mail" onChange={handleTextChange} errorMessage={formData["emailValidation"]} />
             <Input labelText="Senha" type="password" name="password" placeholder="Informe sua senha" onChange={handleTextChange} errorMessage={formData["passwordValidation"]} rightIcon={<LockIcon/>} />
-            <PrimaryButton text="Entrar" onClick={handleSubmit} />
-            <OutlinedButton text="Registrar" onClick={() => redirect("/register")}/>
-            <FlatButton text="Esqueci Minha Senha" onClick={() => redirect("/recover")} />
+            <Button text="Entrar" onClick={handleSubmit} buttonStyle="primary" />
+            <Button buttonStyle="outlined" text="Registrar" onClick={() => redirect("/register")}/>
+            <Button buttonStyle="flat" text="Esqueci Minha Senha" onClick={() => redirect("/recover")} />
         </Container>
 }

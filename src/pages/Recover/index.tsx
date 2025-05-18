@@ -1,7 +1,6 @@
 import { useState } from "react";
-import { FlatButton } from "../../../lib/components/FlatButton";
 import { Input } from "../../../lib/components/Input";
-import { PrimaryButton } from "../../../lib/components/PrimaryButton";
+import { Button } from "../../../lib/components/Button";
 import { Container } from "./styled";
 import { useNavigate } from "react-router-dom";
 
@@ -20,14 +19,14 @@ export function Recover() {
   return <Container>
     {!state ? <>
               <Input placeholder="Informe seu e-mail para recuperação" />
-              <PrimaryButton text="Enviar" onClick={handleSend}/>
+              <Button text="Enviar" onClick={handleSend} buttonStyle="primary"/>
             </>
     :
     <>
       <p>
         As intruções para recuperação da senha foram enviadas por email
       </p>
-      <FlatButton text="Voltar A Tela De Login" onClick={handleBackToLogin} />
+      <Button buttonStyle="flat" text="Voltar A Tela De Login" onClick={handleBackToLogin} />
     </>
     }
   </Container>

@@ -1,12 +1,12 @@
 import React from 'react';
 import { render, screen, fireEvent } from '@testing-library/react';
 import { describe, it, expect, vi } from 'vitest';
-import { OutlinedButton } from '.';
+import { Button } from '.';
 import "@testing-library/jest-dom";
 
-describe('OutlinedButton', () => {
+describe('Button', () => {
   it('renders the button with children', () => {
-    render(<OutlinedButton text='Click me'/>);
+    render(<Button buttonStyle='primary' text='Click me'/>);
     const button = screen.getByText('Click me');
     expect(button).toBeInTheDocument();
   });
@@ -14,7 +14,7 @@ describe('OutlinedButton', () => {
   it('calls onClick when clicked', () => {
     const handleClick = vi.fn();
     const { getByRole } = render(
-      <OutlinedButton text='Click me' onClick={handleClick}/>
+      <Button buttonStyle='primary' text='Click me' onClick={handleClick}/>
     );
     fireEvent.click(getByRole('button'));
     expect(handleClick).toHaveBeenCalledTimes(1);
@@ -22,7 +22,7 @@ describe('OutlinedButton', () => {
 
   it('is disabled when disabled prop is true', () => {
     const { getByRole } = render(
-      <OutlinedButton  text='Click me' disabled />
+      <Button buttonStyle='primary'  text='Click me' disabled />
     );
     expect(getByRole('button')).toBeDisabled();
   });
@@ -30,7 +30,7 @@ describe('OutlinedButton', () => {
   it('does not call onClick when disabled', () => {
     const handleClick = vi.fn();
     const { getByRole } = render(
-      <OutlinedButton text='Click me' disabled onClick={handleClick}/>
+      <Button buttonStyle='primary' text='Click me' disabled onClick={handleClick}/>
     );
     fireEvent.click(getByRole('button'));
     expect(handleClick).not.toHaveBeenCalled();
@@ -38,13 +38,13 @@ describe('OutlinedButton', () => {
 
   it('applies custom className', () => {
     const { getByRole } = render(
-      <OutlinedButton text='Click me' className="custom-class" />
+      <Button buttonStyle='primary' text='Click me' className="custom-class" />
     );
     expect(getByRole('button')).toHaveClass('custom-class');
   });
 
   it("should match to snapshot", () => {
-    const { asFragment } = render(<OutlinedButton text="Click me"/>);
+    const { asFragment } = render(<Button buttonStyle='primary' text="Click me"/>);
     expect(asFragment()).toMatchSnapshot();
   })
 });
