@@ -25,7 +25,7 @@ export const DSColors = {
   },
   error: {
     light: "#E57373",
-    main: "#F44336",
+    main: "#F2994A",
     dark: "#D32F2F"
   },
   background: {

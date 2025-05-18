@@ -19,7 +19,7 @@ export const Container = styled.div`
   }
 
   & > p {
-    color: ${DSColors.error.light};
+    color: ${DSColors.error.main};
   }
 `
 

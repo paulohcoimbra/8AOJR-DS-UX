@@ -2,14 +2,14 @@ import React, { ReactNode } from 'react';
 import { DSTypography_paragraph } from "../../utils/typography";
 import { Container, InputContainer } from './styled';
 
-export interface DefaultInputProps
+export interface InputProps
   extends React.InputHTMLAttributes<HTMLInputElement> {
     labelText?: string;
     rightIcon?: ReactNode;
     errorMessage?: string;
   }
 
-export function Input({ labelText, rightIcon, errorMessage, ...props} : DefaultInputProps) {
+export function Input({ labelText, rightIcon, errorMessage, ...props} : InputProps) {
   return <Container>
           {labelText && 
             <label htmlFor="">
