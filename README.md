@@ -51,6 +51,26 @@
 
 >  Certifique-se de ter o [Node.js](https://nodejs.org/) instalado.
 
+---
+
+## 🧪 Como executar os testes
+
+1. **Execute os testes unitários:**
+  ```bash
+  npm run test
+  ```
+
+---
+
+## 📚 Como iniciar o Storybook
+
+1. **Inicie o Storybook para visualizar e documentar os componentes:**
+  ```bash
+  npm run storybook
+  ```
+
+  O Storybook estará disponível em: [http://localhost:6006/](http://localhost:6006/)
+
 <div align="right">
 
 Criado por [Paulo Vasconcelos](https://www.linkedin.com/in/paulo-h-coimbra/) 🚀
